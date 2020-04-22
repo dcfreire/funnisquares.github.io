@@ -7,7 +7,7 @@
     {% for project in projects %}
 
     <div class="col">
-      <div class="card mb-2 rounded border-secondary">
+      <div class="card mb-2 rounded border-primary">
         <a class="card-link" href={% url 'projects:project_detail' project.pk %}>
         <img class="card-img-top" src="{{ project.image.url }}" style="transform: rotate(0);"/>
         </a> 
