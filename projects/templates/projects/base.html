@@ -1,0 +1,58 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Projects</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/5f81a82863.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="{% static "projects/style/theme.css" %}">
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+
+    .flex-fill {
+      flex: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="d-md-flex flex-column h-100">
+    <div class="container-fluid d-flex h-100">
+      <div class="row flex-fill bg-primary text-light">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar bg-dark d-flex flex-column flex-fill">
+          <div class="sidebar-sticky">
+            <br style="line-height:1;">
+            <a class="nav-link text-light" href="."><i class="fas fa-home"></i> Home</a>
+
+          </div>
+        </nav>
+
+        <div class="col-md-9 ml-sm-auto col-lg-10 px-4 d-flex flex-column flex-fill bg-primary">
+
+          {% block content %}
+          {% endblock %}
+          <footer class="pt-4 my-md-5 pt-md-5 border-top">
+            <div class="row flex-fill">
+              <div class="col">"Footer"</div>
+              <div class="col">"Footer"</div>
+              <div class="col">"Footer"</div>
+
+            </div>
+
+          </footer>
+        </div>
+
+      </div>
+
+    </div>
+</body>
+</main>
+
+</html>

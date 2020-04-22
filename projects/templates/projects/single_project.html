@@ -1,0 +1,19 @@
+{% extends 'projects/base.html' %}
+{% load static %}
+
+{% block content %}
+  <h1 class="m-10"> {{project.title}} </h1>
+
+  <div class="row flex-fill d-flex">
+
+
+    <img class="img-fluid rounded float-left border border-dark col-md-5" src="{{ project.image.url }}">
+    <div class="col bg-dark text-light">
+    <p class="mb-0 font-weight-bold">Description:</p>
+    <p class="mb-3">{{project.description}}</p>
+    <p class="mb-0 font-weight-bold">Technology:</p>
+
+    <p class="mb-3">{{project.technology}}</p>
+  </div>
+</div>
+{% endblock %}

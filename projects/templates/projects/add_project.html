@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Projects</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/5f81a82863.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <div class="row">
+
+    <nav class="col-md-2 d-none d-md-block bg-dark sidebar">
+      <div class="sidebar-sticky">
+        <br style = "line-height:1;">
+        <a class="nav-link" href="."><i class="fas fa-home"></i> Home</a>
+
+      </div>
+    </nav>
+    <main class="col-md-9 ml-sm-auto col-lg-10 px-4" role=main>
+      <div class="container">
+      <br style = "line-height:1;">
+
+      <h3>Add a project</h3>
+      <br style = "line-height:4;">
+      <form action="addproject" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" class="btn btn-primary" value="Submit" />
+      </form>
+    </div>
+    </main>
+
+  </div>
+  </div>
+</body>
+
+</html>
