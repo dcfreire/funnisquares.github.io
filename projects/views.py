@@ -1,8 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponseRedirect
+#from django.http import HttpResponseRedirect
 from projects.models import Project
-from .forms import ProjectForm
-from django.contrib.auth.decorators import login_required
+#from .forms import ProjectForm
+#from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
