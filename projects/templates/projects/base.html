@@ -30,7 +30,7 @@
   <main class="d-md-flex flex-column h-100">
     <div class="container-fluid d-flex h-100">
       <div class="row flex-fill bg-primary text-light">
-        <nav class="col-md-2 d-none d-md-block bg-light sidebar bg-dark d-flex flex-column flex-fill">
+        <nav class="col-2 d-none d-md-block bg-light sidebar bg-dark d-flex flex-column flex-fill">
           <div class="sidebar-sticky">
             <p>
               <h1 style="font-family: Oswald;"> Projects </h1>
@@ -39,19 +39,11 @@
           </div>
         </nav>
 
-        <div class="col-md-10 ml-sm-auto col-lg-10 px-4 bg-primary">
+        <div class="col-10 ml-sm-auto px-4 bg-primary">
 
           {% block content %}
           {% endblock %}
-          <footer class="pt-4 my-md-5 pt-md-5 border-top">
-            <div class="row flex-fill">
-              <div class="col">"Footer"</div>
-              <div class="col">"Footer"</div>
-              <div class="col">"Footer"</div>
-
-            </div>
-
-          </footer>
+          
         </div>
 
       </div>
