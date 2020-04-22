@@ -2,18 +2,19 @@
 {% load static %}
 
 {% block content %}
-  <h1 class="m-10"> {{project.title}} </h1>
 
-  <div class="row flex-fill d-flex">
+<div class="row flex-fill d-flex">
 
+  <div class="media">
+    <img class="img-fluid rounded float-left border border-dark mr-4" style="max-width: 40%;" src="{{ project.image.url }}">
+    <div class="media-body text-light">
+      <h4 class="mt-0"> {{project.title}} </h4>
+      <p class="mb-0 font-weight-bold">Description:</p>
+      <p class="mb-3">{{project.description}}</p>
+      <p class="mb-0 font-weight-bold">Technology:</p>
+      <p class="mb-3">{{project.technology}}</p>
 
-    <img class="img-fluid rounded float-left border border-dark" style="max-width: 40%;" src="{{ project.image.url }}">
-    <div class="col bg-dark text-light">
-    <p class="mb-0 font-weight-bold">Description:</p>
-    <p class="mb-3">{{project.description}}</p>
-    <p class="mb-0 font-weight-bold">Technology:</p>
-
-    <p class="mb-3">{{project.technology}}</p>
+    </div>
   </div>
 </div>
 {% endblock %}
