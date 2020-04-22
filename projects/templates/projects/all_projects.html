@@ -8,11 +8,15 @@
 
     <div class="col">
       <div class="card mb-2 rounded border-secondary">
-        <img class="card-img-top" src="{{ project.image.url }}" />
-        <div class="card-body bg-dark text-light ">
+        <a class="card-link" href={% url 'projects:project_detail' project.pk %}>
+        <img class="card-img-top" src="{{ project.image.url }}" style="transform: rotate(0);"/>
+        </a> 
+        <div class="card-body bg-dark text-light " style="position: relative;">
           <h5 class="card-title">{{ project.title }}</h5>
           <p class="card-text">{{ project.description }}</p>
-          <a href={% url 'projects:project_detail' project.pk %} class="stretched-link"></a>
+          <a href={% url 'projects:project_detail' project.pk %} class="btn btn-primary">
+           Read More
+          </a>
         </div>
       </div>
     </div>
