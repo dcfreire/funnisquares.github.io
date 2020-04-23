@@ -1,12 +1,13 @@
 {% extends 'projects/base.html' %}
 {% load static %}
 
+{% block title %} {{project.title}} {% endblock title %}
+
 {% block content %}
-
 <div class="row flex-fill d-flex">
-
   <div class="media">
-    <img class="img-fluid rounded float-left border border-0 mr-4" style="max-width: 40%;" src="{{ project.image.url }}">
+    <img class="img-fluid rounded float-left border border-0 mr-4" style="max-width: 40%;"
+      src="{{ project.image.url }}">
     <div class="media-body text-light">
       <h4 class="mt-0"> {{project.title}} </h4>
       <p class="mb-0 font-weight-bold">Description:</p>

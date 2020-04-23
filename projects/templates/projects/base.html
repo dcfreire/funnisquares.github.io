@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>Projects</title>
+  <title>{% block title %} Projects {% endblock %}</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <script src="https://kit.fontawesome.com/5f81a82863.js" crossorigin="anonymous"></script>
@@ -32,12 +32,13 @@
       <div class="row flex-fill bg-primary text-light">
         <nav class="col-2 d-none d-md-block bg-light sidebar bg-dark d-flex flex-column flex-fill">
           <div class="sidebar-sticky text-center">
+            {% block sidebar %}
             <p>
               <h1 class="d-none d-lg-block" style="font-family: Oswald;"> Projects </h1>
               <p></p>
               <a class="nav-link text-light p-0" href="."><span class="d-none d-lg-block"><i class="fas fa-home"></i>
                   Home</span><span class="d-lg-none"><i class="fas fa-home"></i></span></a>
-
+            {% endblock  %}
           </div>
         </nav>
 
@@ -55,7 +56,6 @@
 
           </footer>-->
         </div>
-
       </div>
 
     </div>
