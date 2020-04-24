@@ -11,7 +11,6 @@ def all_projects(request):
 
 
 def project_detail(request, title):
-    print(title)
     project = Project.objects.get(title=title)
     return render(request, 'projects/single_project.html', {'project': project})
 

@@ -26,7 +26,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 SECRET_KEY = '(#p1p$ky@^-pi!@966^o%ye2-zf)@o@@evef5zsrw)$cd(-%pw'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['funnisquares.pythonanywhere.com', '127.0.0.1']
 
