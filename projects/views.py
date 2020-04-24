@@ -3,7 +3,6 @@ from django.shortcuts import render
 from projects.models import Project
 #from .forms import ProjectForm
 #from django.contrib.auth.decorators import login_required
-
 # Create your views here.
 
 def all_projects(request):
@@ -11,8 +10,9 @@ def all_projects(request):
     return render(request, 'projects/all_projects.html', {'projects': projects})
 
 
-def project_detail(request, pk):
-    project = Project.objects.get(pk=pk)
+def project_detail(request, title):
+    print(title)
+    project = Project.objects.get(title=title)
     return render(request, 'projects/single_project.html', {'project': project})
 
 #@login_required

@@ -7,13 +7,13 @@
 
     <div class="col">
       <div class="card border-secondary" >
-        <a class="card-link" href={% url 'projects:project_detail' project.pk %}>
+        <a class="card-link" href={% url 'projects:project_detail' project.title %}>
         <img class="card-img-top" src="{{ project.image.url }}" style="transform: rotate(0);"/>
         </a> 
         <div class="card-body bg-dark text-light rounded-bottom" style="position: relative;">
           <h5 class="card-title">{{ project.title }}</h5>
           <p class="card-text">{{ project.description }}</p>
-          <a href={% url 'projects:project_detail' project.pk %} class="btn btn-primary">
+          <a href={% url 'projects:project_detail' project.title %} class="btn btn-primary">
            Read More
           </a>
         </div>
